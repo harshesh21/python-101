@@ -133,10 +133,11 @@ user_0 = {
     }
 
 for key, value in user_0.items():
-    print(f"\nKey: {key}")
+    print(f"\nKeys: {key}")
     print(f"Value: {value}")
 
 for user in user_0.values():
     print(f"keyssss {user.title()}")
+
 
     
