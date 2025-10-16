@@ -140,4 +140,40 @@ for user in user_0.values():
     print(f"keyssss {user.title()}")
 
 
+# Defining a function
+def greet_user(username):
+    """Display a simple greeting."""
+    print(f"Hello, {username}!")
+
+greet_user('jesse')
+
+
+# Function with default argument and keyword argument, once you use keyword argument 
+# you have to use it for all the rest of the arguments
+# pet_name and animal_type arguments are keyword arguments and animal_type paramenter has a default value
+def describe_pet(pet_name, animal_type='dog'):
+    """Display information about a pet."""
+    print(f"\nI have a {animal_type}.")
+    print(f"My {animal_type}'s name is {pet_name.title()}.")
+
+describe_pet(animal_type='hamster',pet_name='willie')
+
+describe_pet('mary')
+
+#function_name(list_name[:]) to pass a copy of the list to the function
+
+#to pass an arbitrary number of arguments use * before the paraemeter name
+def make_pizza(*toppings):
+    """Print the list of toppings that have been requested."""
+    print(toppings)      
     
+def build_profile(first, last, **user_info):
+    """Build a dictionary containing everything we know about a user."""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+user_profile = build_profile('albert', 'einstein',
+                             location='princeton',
+                             field='physics')
+print(user_profile)
